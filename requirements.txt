@@ -8,3 +8,5 @@ torch
 torchvision
 transformers>=4.26.0
 timm
+streamlit-pasteimage  # required for native clipboard paste
+tqdm
