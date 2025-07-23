@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import easyocr
 import io
-
+import transformers
 import torch
 from transformers import TableTransformerForObjectDetection, TableTransformerImageProcessor
 
