@@ -6,12 +6,14 @@ import easyocr
 import io
 import transformers
 import torch
-from transformers import TableTransformerForObjectDetection, TableTransformerImageProcessor
+from transformers import TableTransformerForObjectDetection, AutoImageProcessor
+
+
 
 # --- Model Config: Load Once ---
 @st.cache_resource
 def load_table_transformer():
-    processor = TableTransformerImageProcessor(do_rescale=True, image_mean=[0.5], image_std=[0.5])
+    processor = AutoImageProcessor.from_pretrained("microsoft/table-transformer-detection")
     model = TableTransformerForObjectDetection.from_pretrained(
         "microsoft/table-transformer-detection"
     )
