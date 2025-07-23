@@ -1,0 +1,10 @@
+streamlit
+easyocr
+opencv-python
+Pillow
+pandas
+openpyxl
+torch
+torchvision
+transformers>=4.26.0
+timm
